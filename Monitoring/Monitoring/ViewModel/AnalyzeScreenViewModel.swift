@@ -25,9 +25,9 @@ class AnalyzeScreenViewModel {
     func analyzeScreen(image: NSImage) {
         guard let cgImage = image.cgImage(forProposedRect: nil, context: nil, hints: nil) else { return }
         yoloService.detectPeople(image: cgImage) { [weak self] isPersonDetected in
-            if isPersonDetected {
+            if (isPersonDetected != 0) {
                 self?.detectedPeopleCount += 1
-                print("감지된 사람 수: \(self?.detectedPeopleCount ?? 0)")
+                print("감지 시도 횟수: \(self?.detectedPeopleCount ?? 0)")
             }
         }
     }

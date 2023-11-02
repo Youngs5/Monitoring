@@ -35,12 +35,17 @@ class CaptureScreenViewModel {
              self.onScreenCaptured?(NSImage(cgImage: capturedImage, size: NSSize(width: capturedImage.width, height: capturedImage.height)))
 
              self.yoloService.detectPeople(image: capturedImage) { [weak self] isPersonDetected in
-                 self?.onPersonDetected?(isPersonDetected)
+                 self?.onPersonDetected?((isPersonDetected != 0))
 
-                 if isPersonDetected {
+                 if (isPersonDetected != 0) {
                      self?.analyzeScreenViewModel?.analyzeScreen(image: NSImage(cgImage: capturedImage, size: NSSize(width: capturedImage.width, height: capturedImage.height)))
                  }
+                 
+                 // 감지된 레이블 수 출력
+                 let detectedLabelsCount = self?.yoloService.detectedLabelsCount ?? 0
+                 print("감지된 레이블 수: \(detectedLabelsCount)")
              }
+
          }
          isCapturing = true
      }

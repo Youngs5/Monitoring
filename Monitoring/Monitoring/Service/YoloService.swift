@@ -12,6 +12,7 @@ import Vision
 class YoloService {
     private var isDetectedImage: Bool = false
     private var objectDetectionRequest: VNCoreMLRequest?
+    var detectedLabelsCount: Int = 0
     
     init() {
         loadYOLOv3TinyModel()
@@ -24,7 +25,9 @@ class YoloService {
         }
 
         objectDetectionRequest = VNCoreMLRequest(model: yoloTinyModel, completionHandler: { [weak self] request, error in
-            if let detectedLabels = self?.handleObjectDetectionResults(request: request, error: error), !detectedLabels.isEmpty {
+            let detectedLabelsCount = self?.handleObjectDetectionResults(request: request, error: error) ?? 0
+            print("Detected Labels Count: \(detectedLabelsCount)")
+            if detectedLabelsCount > 0 {
                 self?.isDetectedImage = true
             } else {
                 self?.isDetectedImage = false
@@ -32,8 +35,8 @@ class YoloService {
         })
     }
 
-    private func handleObjectDetectionResults(request: VNRequest, error: Error?) -> [String] {
-        guard let results = request.results as? [VNRecognizedObjectObservation] else { return [] }
+    private func handleObjectDetectionResults(request: VNRequest, error: Error?) -> Int {
+        guard let results = request.results as? [VNRecognizedObjectObservation] else { return 0 }
 
         var detectedLabels = [String]()
         
@@ -46,11 +49,11 @@ class YoloService {
                 }
             }
         }
-        
-        return detectedLabels
+        detectedLabelsCount = detectedLabels.count
+        return detectedLabels.count
     }
 
-    func detectObjects(image: CGImage, completion: @escaping ([String]) -> ()) {
+    func detectObjects(image: CGImage, completion: @escaping (Int) -> ()) {
         guard let objectDetectionRequest = objectDetectionRequest else { return }
 
         let request = VNCoreMLRequest(model: objectDetectionRequest.model) { request, error in
@@ -64,19 +67,16 @@ class YoloService {
             try handler.perform([request])
         } catch {
             print("Failed to perform object detection: \(error)")
-            completion([])
+            completion(0)
         }
     }
     
-    func detectPeople(image: CGImage, completion: @escaping (Bool) -> Void) {
+    func detectPeople(image: CGImage, completion: @escaping (Int) -> Void) {
         guard let objectDetectionRequest = objectDetectionRequest else { return }
 
         let request = VNCoreMLRequest(model: objectDetectionRequest.model) { [weak self] request, error in
-            if let detectedLabels = self?.handleObjectDetectionResults(request: request, error: error), !detectedLabels.isEmpty {
-                completion(true)
-            } else {
-                completion(false)
-            }
+            let detectedLabelsCount = self?.handleObjectDetectionResults(request: request, error: error) ?? 0
+            completion(detectedLabelsCount)
         }
 
         let handler = VNImageRequestHandler(cgImage: image, options: [:])
@@ -85,8 +85,7 @@ class YoloService {
             try handler.perform([request])
         } catch {
             print("Failed to perform object detection: \(error)")
-            completion(false)
+            completion(0)
         }
     }
-
 }
