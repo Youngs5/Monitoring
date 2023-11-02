@@ -15,30 +15,35 @@ class CaptureScreenViewModel {
     
     var onScreenCaptured: ((NSImage?) -> Void)?
     var onPersonDetected: ((Bool) -> Void)?
+    var analyzeScreenViewModel: AnalyzeScreenViewModel?
     
-    init(yoloService: YoloService) {
+    init(yoloService: YoloService, analyzeScreenViewModel: AnalyzeScreenViewModel) {
         self.yoloService = yoloService
+        self.analyzeScreenViewModel = analyzeScreenViewModel
     }
     
     func startCapture() {
-        guard !isCapturing else { return }
-        
-        timer = Timer.scheduledTimer(withTimeInterval: 60.0, repeats: true) { [weak self] _ in
-            guard let self = self else { return }
-            
-            guard let capturedImage = self.captureScreen() else {
-                print("Failed to capture screen")
-                return
-            }
-            self.onScreenCaptured?(NSImage(cgImage: capturedImage, size: NSSize(width: capturedImage.width, height: capturedImage.height)))
-            
-            self.yoloService.detectPeople(image: capturedImage) { [weak self] isPersonDetected in
-                self?.onPersonDetected?(isPersonDetected)
-            }
-        }
-        isCapturing = true
-    }
-    
+         guard !isCapturing else { return }
+
+         timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { [weak self] _ in
+             guard let self = self else { return }
+
+             guard let capturedImage = self.captureScreen() else {
+                 print("Failed to capture screen")
+                 return
+             }
+             self.onScreenCaptured?(NSImage(cgImage: capturedImage, size: NSSize(width: capturedImage.width, height: capturedImage.height)))
+
+             self.yoloService.detectPeople(image: capturedImage) { [weak self] isPersonDetected in
+                 self?.onPersonDetected?(isPersonDetected)
+
+                 if isPersonDetected {
+                     self?.analyzeScreenViewModel?.analyzeScreen(image: NSImage(cgImage: capturedImage, size: NSSize(width: capturedImage.width, height: capturedImage.height)))
+                 }
+             }
+         }
+         isCapturing = true
+     }
     
     func stopCapture() {
         timer?.invalidate()

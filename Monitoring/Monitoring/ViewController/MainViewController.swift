@@ -45,7 +45,7 @@ class MainViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        captureScreenViewModel = CaptureScreenViewModel(yoloService: YoloService())
+        captureScreenViewModel = CaptureScreenViewModel(yoloService: YoloService(), analyzeScreenViewModel: AnalyzeScreenViewModel(yoloService: YoloService()))
         captureScreenViewModel.onPersonDetected = { isPersonDetected in
             print("Person Detected: \(isPersonDetected)")
         }
