@@ -14,7 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         let contentViewController = MainViewController()
         window = NSWindow(contentViewController: contentViewController)
-        window.title = "My macOS App"
+        window.title = "Monitoring System"
         window.setContentSize(NSSize(width: 800, height: 600))
         window.center()
         window.makeKeyAndOrderFront(nil)
