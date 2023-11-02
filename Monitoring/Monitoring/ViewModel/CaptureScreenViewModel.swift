@@ -59,7 +59,7 @@ class CaptureScreenViewModel {
         let screenRect = CGRect(x: 0, y: 0, width: screenFrame.width, height: screenFrame.height)
         
         if let screenShot = CGDisplayCreateImage(CGMainDisplayID(), rect: screenRect) {
-            print("Screen captured successfully")
+            print("화면 캡쳐 성공")
             return screenShot
         }
         

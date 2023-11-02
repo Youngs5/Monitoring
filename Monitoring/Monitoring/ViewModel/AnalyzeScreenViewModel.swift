@@ -27,7 +27,7 @@ class AnalyzeScreenViewModel {
         yoloService.detectPeople(image: cgImage) { [weak self] isPersonDetected in
             if isPersonDetected {
                 self?.detectedPeopleCount += 1
-                print("Detected People Count: \(self?.detectedPeopleCount ?? 0)")
+                print("감지된 사람 수: \(self?.detectedPeopleCount ?? 0)")
             }
         }
     }

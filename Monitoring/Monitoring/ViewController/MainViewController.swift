@@ -47,7 +47,7 @@ class MainViewController: NSViewController {
         
         captureScreenViewModel = CaptureScreenViewModel(yoloService: YoloService(), analyzeScreenViewModel: AnalyzeScreenViewModel(yoloService: YoloService()))
         captureScreenViewModel.onPersonDetected = { isPersonDetected in
-            print("Person Detected: \(isPersonDetected)")
+            print("사람 감지 여부: \(isPersonDetected)")
         }
         addViews()
         setupUI()
@@ -115,6 +115,12 @@ class MainViewController: NSViewController {
         }
         
         captureScreenViewModel.startCapture()
+        
+        if let window = view.window {
+//            window.isOpaque = false
+            window.backgroundColor = NSColor.clear
+//            window.ignoresMouseEvents = false
+        }
     }
     
     @objc func endButtonClicked() {
@@ -124,6 +130,12 @@ class MainViewController: NSViewController {
         timerLabel.stringValue = "00:00"
         
         captureScreenViewModel.stopCapture()
+        
+        if let window = view.window {
+//            window.isOpaque = false
+            window.backgroundColor = NSColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+//            window.ignoresMouseEvents = true
+        }
     }
     
     private func updateTimerLabel() {
