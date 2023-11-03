@@ -24,6 +24,11 @@
 		4B37D8622AF3507600162043 /* CaptureScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B37D8582AF3507600162043 /* CaptureScreenViewController.swift */; };
 		4B37D8632AF3507600162043 /* ExecuteActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B37D8592AF3507600162043 /* ExecuteActionViewController.swift */; };
 		4B37D8642AF3507600162043 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B37D85A2AF3507600162043 /* MainViewController.swift */; };
+		4B37D97C2AF4BF3600162043 /* CodeResources in Resources */ = {isa = PBXBuildFile; fileRef = 4B37D9752AF4BF3600162043 /* CodeResources */; };
+		4B37D97D2AF4BF3600162043 /* ZoomAudioDevice in Resources */ = {isa = PBXBuildFile; fileRef = 4B37D9772AF4BF3600162043 /* ZoomAudioDevice */; };
+		4B37D97E2AF4BF3600162043 /* ZoomAudioIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 4B37D9792AF4BF3600162043 /* ZoomAudioIcon.icns */; };
+		4B37D97F2AF4BF3600162043 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B37D97A2AF4BF3600162043 /* Localizable.strings */; };
+		4B37D9802AF4BF3600162043 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B37D97B2AF4BF3600162043 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +47,18 @@
 			remoteInfo = Monitoring;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4B37D8842AF4ABE400162043 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4B37D81F2AF34FCB00162043 /* Monitoring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Monitoring.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +82,19 @@
 		4B37D8582AF3507600162043 /* CaptureScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureScreenViewController.swift; sourceTree = "<group>"; };
 		4B37D8592AF3507600162043 /* ExecuteActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExecuteActionViewController.swift; sourceTree = "<group>"; };
 		4B37D85A2AF3507600162043 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4B37D8762AF4A90F00162043 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = "../../Downloads/zoom-sdk-macos-5.16.2.23470/ZoomSDK/libcrypto.dylib"; sourceTree = "<group>"; };
+		4B37D8782AF4A91D00162043 /* libjson.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjson.dylib; path = "../../Downloads/zoom-sdk-macos-5.16.2.23470/ZoomSDK/libjson.dylib"; sourceTree = "<group>"; };
+		4B37D87A2AF4A93D00162043 /* libminizip.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libminizip.dylib; path = "../../Downloads/zoom-sdk-macos-5.16.2.23470/ZoomSDK/libminizip.dylib"; sourceTree = "<group>"; };
+		4B37D87C2AF4A94400162043 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = "../../Downloads/zoom-sdk-macos-5.16.2.23470/ZoomSDK/libssl.dylib"; sourceTree = "<group>"; };
+		4B37D87E2AF4A94B00162043 /* libcares.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcares.dylib; path = "../../Downloads/zoom-sdk-macos-5.16.2.23470/ZoomSDK/libcares.dylib"; sourceTree = "<group>"; };
+		4B37D8802AF4A95400162043 /* libzoombase_crypto_shared.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libzoombase_crypto_shared.dylib; path = "../../Downloads/zoom-sdk-macos-5.16.2.23470/ZoomSDK/libzoombase_crypto_shared.dylib"; sourceTree = "<group>"; };
+		4B37D8822AF4A9CB00162043 /* ZoomSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZoomSDK.framework; path = "../../Downloads/zoom-sdk-macos-5.16.2.23470/ZoomSDK/ZoomSDK.framework"; sourceTree = "<group>"; };
+		4B37D8932AF4AC5C00162043 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		4B37D9752AF4BF3600162043 /* CodeResources */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CodeResources; sourceTree = "<group>"; };
+		4B37D9772AF4BF3600162043 /* ZoomAudioDevice */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; path = ZoomAudioDevice; sourceTree = "<group>"; };
+		4B37D9792AF4BF3600162043 /* ZoomAudioIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ZoomAudioIcon.icns; sourceTree = "<group>"; };
+		4B37D97A2AF4BF3600162043 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; usesTabs = 0; };
+		4B37D97B2AF4BF3600162043 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +129,7 @@
 				4B37D8332AF34FCC00162043 /* MonitoringTests */,
 				4B37D83D2AF34FCC00162043 /* MonitoringUITests */,
 				4B37D8202AF34FCB00162043 /* Products */,
+				4B37D8752AF4A90F00162043 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +146,7 @@
 		4B37D8212AF34FCB00162043 /* Monitoring */ = {
 			isa = PBXGroup;
 			children = (
+				4B37D9712AF4BF3600162043 /* Plugins */,
 				4B37D8542AF3507600162043 /* Model */,
 				4B37D8512AF3507600162043 /* Service */,
 				4B37D8562AF3507600162043 /* ViewController */,
@@ -183,6 +215,73 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		4B37D8752AF4A90F00162043 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B37D8932AF4AC5C00162043 /* Cocoa.framework */,
+				4B37D8822AF4A9CB00162043 /* ZoomSDK.framework */,
+				4B37D8802AF4A95400162043 /* libzoombase_crypto_shared.dylib */,
+				4B37D87E2AF4A94B00162043 /* libcares.dylib */,
+				4B37D87C2AF4A94400162043 /* libssl.dylib */,
+				4B37D87A2AF4A93D00162043 /* libminizip.dylib */,
+				4B37D8782AF4A91D00162043 /* libjson.dylib */,
+				4B37D8762AF4A90F00162043 /* libcrypto.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B37D9712AF4BF3600162043 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				4B37D9722AF4BF3600162043 /* ZoomAudioDevice.driver */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+		4B37D9722AF4BF3600162043 /* ZoomAudioDevice.driver */ = {
+			isa = PBXGroup;
+			children = (
+				4B37D9732AF4BF3600162043 /* Contents */,
+			);
+			path = ZoomAudioDevice.driver;
+			sourceTree = "<group>";
+		};
+		4B37D9732AF4BF3600162043 /* Contents */ = {
+			isa = PBXGroup;
+			children = (
+				4B37D9742AF4BF3600162043 /* _CodeSignature */,
+				4B37D9762AF4BF3600162043 /* MacOS */,
+				4B37D9782AF4BF3600162043 /* Resources */,
+				4B37D97B2AF4BF3600162043 /* Info.plist */,
+			);
+			path = Contents;
+			sourceTree = "<group>";
+		};
+		4B37D9742AF4BF3600162043 /* _CodeSignature */ = {
+			isa = PBXGroup;
+			children = (
+				4B37D9752AF4BF3600162043 /* CodeResources */,
+			);
+			path = _CodeSignature;
+			sourceTree = "<group>";
+		};
+		4B37D9762AF4BF3600162043 /* MacOS */ = {
+			isa = PBXGroup;
+			children = (
+				4B37D9772AF4BF3600162043 /* ZoomAudioDevice */,
+			);
+			path = MacOS;
+			sourceTree = "<group>";
+		};
+		4B37D9782AF4BF3600162043 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4B37D9792AF4BF3600162043 /* ZoomAudioIcon.icns */,
+				4B37D97A2AF4BF3600162043 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -193,6 +292,7 @@
 				4B37D81B2AF34FCB00162043 /* Sources */,
 				4B37D81C2AF34FCB00162043 /* Frameworks */,
 				4B37D81D2AF34FCB00162043 /* Resources */,
+				4B37D8842AF4ABE400162043 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -287,8 +387,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B37D97C2AF4BF3600162043 /* CodeResources in Resources */,
+				4B37D97F2AF4BF3600162043 /* Localizable.strings in Resources */,
+				4B37D97E2AF4BF3600162043 /* ZoomAudioIcon.icns in Resources */,
 				4B37D8272AF34FCC00162043 /* Assets.xcassets in Resources */,
+				4B37D97D2AF4BF3600162043 /* ZoomAudioDevice in Resources */,
 				4B37D82A2AF34FCC00162043 /* Main.storyboard in Resources */,
+				4B37D9802AF4BF3600162043 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
