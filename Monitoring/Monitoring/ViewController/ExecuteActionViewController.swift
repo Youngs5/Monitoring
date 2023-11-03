@@ -15,4 +15,3 @@ class ExecuteActionViewController: NSViewController {
         self.view = view
     }
 }
-

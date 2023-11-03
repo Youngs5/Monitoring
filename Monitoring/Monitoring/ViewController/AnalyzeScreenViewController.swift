@@ -9,10 +9,9 @@ import Cocoa
 
 class AnalyzeScreenViewController: NSViewController {
     override func loadView() {
-        let view = NSView()
+        let view = NSView(frame: NSScreen.main!.frame)
         view.wantsLayer = true
         view.layer?.backgroundColor = NSColor.green.cgColor
         self.view = view
     }
 }
-

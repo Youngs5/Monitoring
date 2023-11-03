@@ -61,7 +61,7 @@ class MainViewController: NSViewController {
             window.styleMask.insert(.fullSizeContentView)
             
             window.isOpaque = false
-            window.backgroundColor = NSColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+            window.backgroundColor = NSColor(red: 0, green: 0, blue: 0, alpha: 0.3)
         }
     }
     
