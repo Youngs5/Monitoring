@@ -29,6 +29,13 @@
 		4B37D97E2AF4BF3600162043 /* ZoomAudioIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 4B37D9792AF4BF3600162043 /* ZoomAudioIcon.icns */; };
 		4B37D97F2AF4BF3600162043 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B37D97A2AF4BF3600162043 /* Localizable.strings */; };
 		4B37D9802AF4BF3600162043 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B37D97B2AF4BF3600162043 /* Info.plist */; };
+		4B37D9932AF4E5EC00162043 /* ZoomSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B37D9922AF4E5EC00162043 /* ZoomSDK.framework */; };
+		4B37D99A2AF4E60600162043 /* libjson.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B37D9942AF4E60600162043 /* libjson.dylib */; };
+		4B37D99B2AF4E60600162043 /* libminizip.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B37D9952AF4E60600162043 /* libminizip.dylib */; };
+		4B37D99C2AF4E60600162043 /* libzoombase_crypto_shared.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B37D9962AF4E60600162043 /* libzoombase_crypto_shared.dylib */; };
+		4B37D99D2AF4E60600162043 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B37D9972AF4E60600162043 /* libssl.dylib */; };
+		4B37D99E2AF4E60600162043 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B37D9982AF4E60600162043 /* libcrypto.dylib */; };
+		4B37D99F2AF4E60600162043 /* libcares.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B37D9992AF4E60600162043 /* libcares.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,19 +89,20 @@
 		4B37D8582AF3507600162043 /* CaptureScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureScreenViewController.swift; sourceTree = "<group>"; };
 		4B37D8592AF3507600162043 /* ExecuteActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExecuteActionViewController.swift; sourceTree = "<group>"; };
 		4B37D85A2AF3507600162043 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		4B37D8762AF4A90F00162043 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = "../../Downloads/zoom-sdk-macos-5.16.2.23470/ZoomSDK/libcrypto.dylib"; sourceTree = "<group>"; };
-		4B37D8782AF4A91D00162043 /* libjson.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjson.dylib; path = "../../Downloads/zoom-sdk-macos-5.16.2.23470/ZoomSDK/libjson.dylib"; sourceTree = "<group>"; };
-		4B37D87A2AF4A93D00162043 /* libminizip.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libminizip.dylib; path = "../../Downloads/zoom-sdk-macos-5.16.2.23470/ZoomSDK/libminizip.dylib"; sourceTree = "<group>"; };
-		4B37D87C2AF4A94400162043 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = "../../Downloads/zoom-sdk-macos-5.16.2.23470/ZoomSDK/libssl.dylib"; sourceTree = "<group>"; };
-		4B37D87E2AF4A94B00162043 /* libcares.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcares.dylib; path = "../../Downloads/zoom-sdk-macos-5.16.2.23470/ZoomSDK/libcares.dylib"; sourceTree = "<group>"; };
-		4B37D8802AF4A95400162043 /* libzoombase_crypto_shared.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libzoombase_crypto_shared.dylib; path = "../../Downloads/zoom-sdk-macos-5.16.2.23470/ZoomSDK/libzoombase_crypto_shared.dylib"; sourceTree = "<group>"; };
-		4B37D8822AF4A9CB00162043 /* ZoomSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZoomSDK.framework; path = "../../Downloads/zoom-sdk-macos-5.16.2.23470/ZoomSDK/ZoomSDK.framework"; sourceTree = "<group>"; };
 		4B37D8932AF4AC5C00162043 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4B37D9752AF4BF3600162043 /* CodeResources */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CodeResources; sourceTree = "<group>"; };
 		4B37D9772AF4BF3600162043 /* ZoomAudioDevice */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; path = ZoomAudioDevice; sourceTree = "<group>"; };
 		4B37D9792AF4BF3600162043 /* ZoomAudioIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ZoomAudioIcon.icns; sourceTree = "<group>"; };
 		4B37D97A2AF4BF3600162043 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; usesTabs = 0; };
 		4B37D97B2AF4BF3600162043 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B37D9912AF4DDD200162043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4B37D9922AF4E5EC00162043 /* ZoomSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZoomSDK.framework; path = Monitoring/ZoomSDK/ZoomSDK.framework; sourceTree = "<group>"; };
+		4B37D9942AF4E60600162043 /* libjson.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjson.dylib; path = Monitoring/ZoomSDK/libjson.dylib; sourceTree = "<group>"; };
+		4B37D9952AF4E60600162043 /* libminizip.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libminizip.dylib; path = Monitoring/ZoomSDK/libminizip.dylib; sourceTree = "<group>"; };
+		4B37D9962AF4E60600162043 /* libzoombase_crypto_shared.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libzoombase_crypto_shared.dylib; path = Monitoring/ZoomSDK/libzoombase_crypto_shared.dylib; sourceTree = "<group>"; };
+		4B37D9972AF4E60600162043 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = Monitoring/ZoomSDK/libssl.dylib; sourceTree = "<group>"; };
+		4B37D9982AF4E60600162043 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = Monitoring/ZoomSDK/libcrypto.dylib; sourceTree = "<group>"; };
+		4B37D9992AF4E60600162043 /* libcares.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcares.dylib; path = Monitoring/ZoomSDK/libcares.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B37D99A2AF4E60600162043 /* libjson.dylib in Frameworks */,
+				4B37D9932AF4E5EC00162043 /* ZoomSDK.framework in Frameworks */,
+				4B37D99C2AF4E60600162043 /* libzoombase_crypto_shared.dylib in Frameworks */,
+				4B37D99F2AF4E60600162043 /* libcares.dylib in Frameworks */,
+				4B37D99B2AF4E60600162043 /* libminizip.dylib in Frameworks */,
+				4B37D99D2AF4E60600162043 /* libssl.dylib in Frameworks */,
+				4B37D99E2AF4E60600162043 /* libcrypto.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +161,7 @@
 		4B37D8212AF34FCB00162043 /* Monitoring */ = {
 			isa = PBXGroup;
 			children = (
+				4B37D9912AF4DDD200162043 /* Info.plist */,
 				4B37D9712AF4BF3600162043 /* Plugins */,
 				4B37D8542AF3507600162043 /* Model */,
 				4B37D8512AF3507600162043 /* Service */,
@@ -219,13 +235,13 @@
 			isa = PBXGroup;
 			children = (
 				4B37D8932AF4AC5C00162043 /* Cocoa.framework */,
-				4B37D8822AF4A9CB00162043 /* ZoomSDK.framework */,
-				4B37D8802AF4A95400162043 /* libzoombase_crypto_shared.dylib */,
-				4B37D87E2AF4A94B00162043 /* libcares.dylib */,
-				4B37D87C2AF4A94400162043 /* libssl.dylib */,
-				4B37D87A2AF4A93D00162043 /* libminizip.dylib */,
-				4B37D8782AF4A91D00162043 /* libjson.dylib */,
-				4B37D8762AF4A90F00162043 /* libcrypto.dylib */,
+				4B37D9922AF4E5EC00162043 /* ZoomSDK.framework */,
+				4B37D9992AF4E60600162043 /* libcares.dylib */,
+				4B37D9982AF4E60600162043 /* libcrypto.dylib */,
+				4B37D9942AF4E60600162043 /* libjson.dylib */,
+				4B37D9952AF4E60600162043 /* libminizip.dylib */,
+				4B37D9972AF4E60600162043 /* libssl.dylib */,
+				4B37D9962AF4E60600162043 /* libzoombase_crypto_shared.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -606,13 +622,25 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VMQRF4ZA4R;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Monitoring/ZoomSDK",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Monitoring/Info.plist;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Monitoring/ZoomSDK",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.youngs.Monitoring;
@@ -633,13 +661,25 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VMQRF4ZA4R;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Monitoring/ZoomSDK",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Monitoring/Info.plist;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Monitoring/ZoomSDK",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.youngs.Monitoring;
