@@ -20,17 +20,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.center()
         window.makeKeyAndOrderFront(nil)
         
-        // Zoom SDK 초기화
-        let zoomSDK = MobileRTCSDKInitContext()
-        zoomSDK.domain = "zoom.us" // Zoom 도메인
-        zoomSDK.enableLog = true // 필요에 따라 로그를 활성화할 수 있습니다.
-        let sdkInitialized = MobileRTC.shared().initialize(zoomSDK)
-
-        if sdkInitialized {
-            print("Zoom SDK 초기화 성공")
-        } else {
-            print("Zoom SDK 초기화 실패")
-        }
+        let zoomSdk = ZoomSDK.shared()
+        let initParams = ZoomSDKInitParams()
+        initParams.enableLog = true
+        zoomSdk?.initSDK(with: initParams)
+        zoomSdk?.zoomDomain = "zoom.us"
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
