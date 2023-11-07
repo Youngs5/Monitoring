@@ -6,7 +6,6 @@
 //
 
 import Cocoa
-import ZoomSDK
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -19,15 +18,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.setContentSize(NSSize(width: 800, height: 600))
         window.center()
         window.makeKeyAndOrderFront(nil)
-        
-        let zoomSdk = ZoomSDK.shared()
-        let initParams = ZoomSDKInitParams()
-        initParams.enableLog = true
-        zoomSdk?.initSDK(with: initParams)
-        zoomSdk?.zoomDomain = "zoom.us"
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
     }
 }
-
